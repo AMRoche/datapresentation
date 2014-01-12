@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Hotel Search</title>
+<link href='http://fonts.googleapis.com/css?family=Exo+2:700,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+<body>
+<h1>Hotel Search</h1>
+<!--* Distance
+* Stars
+* MinCost
+* TrpRating
+* UserRating
+-->
+<div class="label">Search For : </div>
+
+<div class="surrounder">
+	<p class="formlabel">Check the check box next to the item you wish to search for to select it.</p>
+
+<div class="forminwrapper">
+<label for="nameCheck">Name : <input type="checkbox" id="nameCheck"></input></label>
+<input type="text" id="name"></input>
+</div>
+<div class="forminwrapper">
+	<label for="starsCheck">Stars : <input type="checkbox" id="starsCheck"></input></label>
+	<select id="stars">
+		<option value="5" selected="selected">&#9734; &#9734; &#9734; &#9734; &#9734;</option>
+		<option value="4">&#9734; &#9734; &#9734; &#9734;</option>
+		<option value="3">&#9734; &#9734; &#9734;</option>
+		<option value="2">&#9734; &#9734;</option>
+		<option value="1">&#9734;</option>
+	</select>
+</div>
+<div class="forminwrapper">
+	<label for="trpratingCheck">Trip Rating : <input type="checkbox" id="trpratingCheck"></input></label>
+	<input type="text" id="trprating"></input>
+</div>
+<div class="forminwrapper">
+	<label for="usrratingCheck">User Rating : <input type="checkbox" id="usrratingCheck"></input></label>
+	<input type="text" id="usrrating"></input>
+</div>
+<div class="forminwrapper">
+	<label for="mincostCheck">Budget : <input type="checkbox" id="mincostCheck"></input></label>
+	<input type="text" id="mincost"></input>
+</div>
+
+<div id="submitButton" class="button">Search</div>
+</div>
+<div class="label">Sort By : </div>
+<div class="surrounder">
+	<div class="inputwrapper">
+	<div id="distSort" class="button">Distance</div>
+	<div id="starSort" class="button">Stars</div>
+	<div id="minCostSort" class="button">Minimum Cost</div>
+	<div id="trpRatingSort" class="button">Trip Rating</div>
+	<div id="userRatingSort" class="button">User Rating</div>
+	</div>
+</div>
+<div class="label">Results : </div>
+<div class="surrounder">
+	<p id="resultcount">We're really sorry, there were no results available.</p>
+	<ul id="hotellist">
+	</ul>
+</div>
+</body>
+<!--<script type="text/javascript" src="scripts/polyfills/xmlhttp/easyXDM.debug.js"></script>
+<script type="text/javascript">
+easyXDM.DomHelper.requiresJSON("scripts/polyfills/json2.js");
+</script>-->
+<script type="text/javascript" src="scripts/polyfills/contains.js"></script>
+<script type="text/javascript" src="scripts/polyfills/consolelog.js"></script>
+<script type="text/javascript" src="scripts/polyfills/json2.js"></script>
+<script type="text/javascript" src="scripts/polyfills/xmlhttp.js"></script>
+<script type="text/javascript" src="scripts/dommanip.js"></script>
+<script type="text/javascript" src="scripts/sorting.js"></script>
+<script type="text/javascript" src="scripts/retrieve.js"></script>
+<script type="text/javascript" src="scripts/lazyload.js"></script>
+</html>

@@ -1,0 +1,276 @@
+@buttoninner: #005cff;
+@buttonouter: #0039a6;
+@buttoninnerhover: #116dff;
+@buttonouterhover: #114ab7;
+@buttoninnerclick: #004bee;
+@buttonouterclick: #002895;
+@surrounderinner: #c7c5e6;
+@surrounderouter: #6567a5;
+@inputerror: #FFE5FF;
+
+
+
+body{
+	.lazy-load, .lazy-loaded {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.lazy-loaded { opacity: 1; }
+
+		font-family:'Exo 2', sans-serif;
+		width:900px;
+		margin:0 auto;
+	.label{
+		font-weight:bold;
+		margin-left:20px;
+		font-size:20px;
+		margin-bottom:10px;
+	}
+	.surrounder{
+		clear:left;
+		background-color: @surrounderinner;
+		border: 4px solid @surrounderouter;
+		border-radius:10px;
+		padding:10px;
+		width:inherit;
+		float:left;
+		.inputwrapper{
+			float:left;
+		}
+		.formlabel{
+			font-size:16px;
+		}
+		.forminwrapper{
+			width:180px;
+			height:60px;
+			float:left;
+			margin: 5px 0px 5px 0px;
+			.error{
+				background-color:@inputerror;
+			}
+			input[type="text"], select{
+				float:left;
+				clear:both;
+				width:155px;
+			    -webkit-border-radius: 5px; 
+			    -moz-border-radius: 5px; 
+			    border-radius: 5px; 
+			        -moz-border-radius-bottomright: 30px; 
+				    -webkit-border-bottom-right-radius: 30px; 
+				    border-bottom-right-radius: 30px; 
+			    border: 1px solid #848484; 
+			    outline:0;   
+			    padding:5px;
+
+			}
+			input[type="text"]:focus{
+				background-color:#FFFDD0;
+			}
+			input[type="text"]{
+			}
+			input[type="checkbox"]{
+			float: right;
+			margin-right: 25px;
+			width: 20px;
+			height: 20px;
+			}
+			label{
+				float:left;
+				width:100%;
+				font-weight:bold;
+			}
+		}
+		margin-bottom:10px;
+	}
+	#submitbutton{
+		clear:left;
+		float:left;
+	}
+	.button{
+		float:left;
+		margin:5px;
+		width:120px;
+		font-weight:bold;
+		padding: 5px 0 5px 0;
+		text-align: center;
+		height:20px;
+		color:#FFF;
+		background-color:@buttoninner;
+		border:2px solid @buttonouter;
+		border-radius:5px;
+	}
+
+	.button:hover{
+		background-color:@buttoninnerhover;
+		border:2px solid @buttonouterhover;
+	}
+	.button:active{
+		background-color:@buttoninnerclick;
+		border:2px solid @buttonouterclick;
+	}
+		#resultcount{
+		    	margin-top:0px;
+		    	font-weight:bold;
+		    	font-size:20px;
+		    }
+
+	ul{
+		clear:left;
+		float:left;
+		margin:0px;
+		padding:0px;
+		width:inherit;
+		li{
+			list-style:none;
+			word-wrap:break-word;
+
+		    float: left;
+		    width: inherit;
+		    padding: 30px 0 30px 0;
+		    border-top:1px solid @surrounderouter;
+		    width:inherit;
+		    div{
+		    	float:left;
+			    .dataholder{
+			    	margin-left:80px;
+			    	.hotellabel{
+			    		clear:left;
+			    		font-weight:bold;
+			    		font-size:16px;
+			    		margin-bottom:5px;
+			    	}
+			    	.stars{color:#6567a5;}
+			    	.name{font-size:20px;}
+			    	.rating{font-weight:normal;}
+			    	dl{
+			    		float:left;
+			    		clear:left;
+			    		margin:0px;
+			    		dt{font-weight:bold;}
+			    		dd{}
+			    	}
+			    }
+			img{
+				float:left;
+		    	margin-left:60px;
+				width:330px;
+				height:225px;
+				padding:3px;
+				border-radius:2px;
+				background-color: @surrounderouter;
+			}
+			}
+		}
+	}
+}
+
+
+@media all and (max-width: 970px) and (min-width: 760px) {
+body{
+	width:740px;
+	ul{
+		li{
+			div{
+				img{
+					margin-left:10px;
+				}
+				.dataholder{margin-left:30px;}
+			}
+		}
+	}
+}
+}
+
+@media all and (max-width: 760px) and (min-width: 670px) {
+body{
+	width:640px;
+	ul{
+		li{
+			div{
+				img{
+					margin:20px 0 0 0;
+					width:240px;
+					height:160px;
+				}
+				.dataholder{margin-left:30px;}
+			}
+		}
+	}
+	.surrounder{
+		.forminwrapper{
+			width:200px;
+			input[type="text"],select{
+				width:130px;
+			}
+		}
+	}
+	.button{
+		width: 190px;
+	}
+}
+
+}
+
+@media all and (max-width: 670px) and (min-width: 300px) {
+
+body{
+	width:300px;
+	.surrounder{
+		.forminwrapper{
+			width:150px;
+			input[type="text"],select{
+				width:130px;
+			}
+		}
+	}
+.button{
+	width: 135px;
+}
+	ul{
+		li{
+			div{
+				img{
+					margin:0 0 10px 0;
+					width:280px;
+					height:180px;
+				}
+				.dataholder{margin-left:0px;}
+			}
+		}
+	}
+}
+}
+
+@media all and (max-width: 300px) and (min-width: 0px) {
+body{
+	width:300px;
+	.surrounder{
+		.forminwrapper{
+			width:150px;
+			input[type="text"],select{
+				width:130px;
+			}
+		}
+	}
+.button{
+	width: 135px;
+}
+	ul{
+		li{
+			div{
+				img{
+					margin:0 0 10px 0;
+					width:280px;
+					height:180px;
+				}
+				.dataholder{margin-left:0px;}
+			}
+		}
+	}
+}
+}
