@@ -20,18 +20,14 @@ var network = {
 	});*/
 		var xhr = createCORSRequest("GET",'http://localhost:22300/hoteldata');
 		if(!xhr){
-			console.log("CORS seems to not be supported.");
 			return;
 		}
 		xhr.onload = function(){
-			console.log("LOADED!");
 			network.data = JSON.parse(xhr.responseText);
-			console.log(network.data);
 			dommanip.render(network.data["data"]["Establishments"]);
 		};
 		xhr.onerror = function(){
 			alert("Error.");
-			console.log("Errored out!");
 		};
 		xhr.send();
 

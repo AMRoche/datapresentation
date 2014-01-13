@@ -28,7 +28,6 @@ var math = {
 	    return Math.floor(num * fixed) / fixed;
 	},
 	"checkStars" : function(object, desired){
-		console.log(parseInt(object["Stars"],10)+","+parseInt(desired["Stars"],10));
 		if(parseInt(object["Stars"],10) >= parseInt(desired["Stars"],10)){
 			return true;
 		}else{
@@ -79,7 +78,6 @@ var math = {
 		}
 		var results = [];
 		var toSplice = [];
-		console.log(jsonobject);
 		for(var i in jsonobject){
 			if(jsonobject.hasOwnProperty(i)){
 				if(results.length == 0){
@@ -111,7 +109,6 @@ var math = {
 					}
 				}else{
 					for(var j = 0; j < results.length;j++){
-						//console.log(i);
 						if(i.toLowerCase()=="name"){
 							if(math.checkName(results[j],jsonobject) == false){
 								toSplice.push(j);
@@ -136,7 +133,6 @@ var math = {
 							}
 						}
 					}
-					console.log(toSplice);
 					for(var j = 0; j < toSplice.length; j++){
 						results.splice(toSplice[j]-j,1);
 					}

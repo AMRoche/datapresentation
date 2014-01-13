@@ -103,8 +103,6 @@ document.getElementById("userRatingSort").onclick = function(){
 	for(var i = 0; i < arr.length; i++){
 		document.getElementById(arr[i]+"Check").onclick = function(elem){
 		return function(){
-			console.log(elem);
-			console.log(document.getElementById(elem+"Check").checked);
 			if(document.getElementById(elem+"Check").checked == false){
 				document.getElementById(elem).className="";
 			}
@@ -198,14 +196,7 @@ document.getElementById("userRatingSort").onclick = function(){
 					dl.appendChild(dd);
 
 					div.appendChild(dl);
-//				var p = document.createElement("div");
-//				p.setAttribute("class","hotellabel");
-//				p.innerHTML = "This venue was rated "+establishments[i]["UserRating"]+" on average by "+establishments[i]["UserRatingCount"]+" users.";
-//				div.appendChild(p);
-
-		
-				//console.log(establishments[i]["StarType"]);
-								liDiv.appendChild(img);
+					liDiv.appendChild(img);
 				liDiv.appendChild(div);
 				li.appendChild(liDiv);
 				domElement.appendChild(li);
@@ -218,7 +209,6 @@ document.getElementById("userRatingSort").onclick = function(){
 //addEventListener('load', function _lazyLoaderInit() {
         lazyLoader.cache=[];
         var imageNodes = document.querySelectorAll('img[data-src]');
-        console.log(imageNodes.length);
         for (var i = 0; i < imageNodes.length; i++) {
           var imageNode = imageNodes[i];
 
@@ -231,9 +221,6 @@ document.getElementById("userRatingSort").onclick = function(){
         lazyLoader.addObservers();
         lazyLoader.loadVisibleImages();
 
-        //removeEventListener('load', _lazyLoaderInit, false);
-        console.log("loaded");
-      //});
 	
 	}
 };
