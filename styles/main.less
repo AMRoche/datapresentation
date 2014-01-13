@@ -30,9 +30,11 @@ body{
 		margin-left:20px;
 		font-size:20px;
 		margin-bottom:10px;
+		clear:left;
 	}
 	.surrounder{
 		clear:left;
+		width:100%;
 		background-color: @surrounderinner;
 		border: 4px solid @surrounderouter;
 		border-radius:10px;
@@ -86,6 +88,62 @@ body{
 			}
 		}
 		margin-bottom:10px;
+
+ul{
+		clear:left;
+		float:left;
+		margin:0px;
+		padding:0px;
+		width:inherit;
+		li{
+			list-style:none;
+			word-wrap:break-word;
+
+		    float: left;
+		    width: inherit;
+		    padding: 30px 0 30px 0;
+		    border-top:1px solid @surrounderouter;
+		    width:inherit;
+		    div{
+		    	float:left;
+
+			    .dataholder{
+			    
+			    	margin-left:80px;
+			    	.hotellabel{
+			    		float:left;
+			    		clear:left;
+			    		font-weight:bold;
+			    		font-size:16px;
+			    		margin-bottom:5px;
+			    	}
+			    	.stars{color:#6567a5; float:left; clear:left;}
+			    	.name{font-size:20px; float:left; clear:left;}
+			    	.rating{font-weight:normal;clear:left;}
+			    	dl{
+			    		float:left;
+			    		clear:left;
+			    		margin:0px;
+			    		dt{font-weight:bold;clear:left;}
+			    		dd{}
+			    	}
+			    }
+			img{
+				float:left;
+		    	margin-left:60px;
+				width:330px;
+				height:225px;
+				padding:3px;
+				border-radius:2px;
+				background-color: @surrounderouter;
+			}
+			}
+		}
+	
+
+
+
+
 	}
 	#submitbutton{
 		clear:left;
@@ -118,54 +176,6 @@ body{
 		    	font-weight:bold;
 		    	font-size:20px;
 		    }
-
-	ul{
-		clear:left;
-		float:left;
-		margin:0px;
-		padding:0px;
-		width:inherit;
-		li{
-			list-style:none;
-			word-wrap:break-word;
-
-		    float: left;
-		    width: inherit;
-		    padding: 30px 0 30px 0;
-		    border-top:1px solid @surrounderouter;
-		    width:inherit;
-		    div{
-		    	float:left;
-			    .dataholder{
-			    	margin-left:80px;
-			    	.hotellabel{
-			    		clear:left;
-			    		font-weight:bold;
-			    		font-size:16px;
-			    		margin-bottom:5px;
-			    	}
-			    	.stars{color:#6567a5;}
-			    	.name{font-size:20px;}
-			    	.rating{font-weight:normal;}
-			    	dl{
-			    		float:left;
-			    		clear:left;
-			    		margin:0px;
-			    		dt{font-weight:bold;}
-			    		dd{}
-			    	}
-			    }
-			img{
-				float:left;
-		    	margin-left:60px;
-				width:330px;
-				height:225px;
-				padding:3px;
-				border-radius:2px;
-				background-color: @surrounderouter;
-			}
-			}
-		}
 	}
 }
 

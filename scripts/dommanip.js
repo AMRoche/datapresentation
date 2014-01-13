@@ -130,20 +130,26 @@ document.getElementById("userRatingSort").onclick = function(){
 				var li = document.createElement("li");
 				var div = document.createElement("div");
 				div.setAttribute("class","dataholder");
+				div.setAttribute("className","dataholder");
 				var liDiv = document.createElement("div");
 
 				var img = document.createElement("img");
 				img.setAttribute("class","lazy-load");
+								img.setAttribute("className","lazy-load");
 				img.setAttribute("src","images/tempspinnersmall.gif");
 				img.setAttribute("data-src",establishments[i]["ImageUrl"]);
 								
 				var p = document.createElement("div");
 				p.setAttribute("class","hotellabel name");
+				p.setAttribute("className","hotellabel name");
+
 				p.innerHTML = establishments[i]["Name"];
 				div.appendChild(p);
 
 				var p = document.createElement("div");
 				p.setAttribute("class","hotellabel stars");
+				p.setAttribute("className","hotellabel stars");
+
 				for(var z = 0; z < establishments[i]["Stars"]; z++){
 					p.innerHTML += "&#9734; ";
 				}
@@ -152,6 +158,8 @@ document.getElementById("userRatingSort").onclick = function(){
 		try{
 				var p = document.createElement("div");
 				p.setAttribute("class","hotellabel rating");
+								p.setAttribute("className","hotellabel rating");
+
 				p.innerHTML = "This venue was rated "+establishments[i]["UserRating"]+" on average by "+establishments[i]["UserRatingCount"]+" users.";
 				div.appendChild(p);
 				}catch(e){}
@@ -206,6 +214,26 @@ document.getElementById("userRatingSort").onclick = function(){
 			document.getElementById("resultcount").innerHTML = "We're really sorry, there were no results available.";
 			domElement.appendChild(p);
 		}
-		lazyload();
+
+//addEventListener('load', function _lazyLoaderInit() {
+        lazyLoader.cache=[];
+        var imageNodes = document.querySelectorAll('img[data-src]');
+        console.log(imageNodes.length);
+        for (var i = 0; i < imageNodes.length; i++) {
+          var imageNode = imageNodes[i];
+
+          // Add a placeholder if one doesn't exist
+          //imageNode.src = imageNode.src || lazyLoader.tinyGif;
+
+          lazyLoader.cache.push(imageNode);
+        }
+
+        lazyLoader.addObservers();
+        lazyLoader.loadVisibleImages();
+
+        //removeEventListener('load', _lazyLoaderInit, false);
+        console.log("loaded");
+      //});
+	
 	}
 };
